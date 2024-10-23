@@ -1,0 +1,70 @@
+
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sunshine Farm</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+      <div class="text-center mb-4"><img src="logo.JPG" width="300" height="100" alt=""></div>
+        <!-- <marquee behavior="scroll" direction="up" scrollamount="1">Welcome to Livestock Management System of Sunshine Farm !</marquee> -->
+         <h6>Welcome to Livestock Management System of Sunshine Farm !</h6>
+        <!-- <a href="logout.php" class="btn btn-danger">Logout</a> -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a href="main.php"><button type="button" class="btn btn-success">Add New Records</button></a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="logout.php"><button type="button" class="btn btn-danger">Logout</button></a>
+            </li>
+          </ul>
+        </div>
+      </nav>    
+      <br>  
+
+
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+      <style>
+          body {
+              background-image: url('banner.jpg'); /* Adjust path to your banner image */
+              background-size: cover;
+              background-position: center;
+              height: 100vh; /* Set height to fill the viewport */
+              margin: 0;
+              padding: 0;
+          }
+          .content {
+              background-color: rgba(255, 255, 255, 0.8); /* Adjust background color and opacity */
+              padding: 20px;
+              border-radius: 10px;
+              margin-top: 50px; /* Adjust margin top to ensure content is below the navbar */
+          }
+      </style>
+        <div class="container mt-5">
+            <!-- <h2>Dashboard</h2> -->
+            <!-- Link to view all records -->
+            <!-- <button type="button" class="btn btn-secondary">View and Edit Records</button> -->
+            <!-- <h5 class="bg-info">View and Edit Records</h5> -->
+            <div class="p-3 mb-2 bg-info text-dark"><h5>View and Edit Records</h5></div>
+            <a href="view.php" class="btn btn-primary">Animal Records</a>
+            <a href="health.php" class="btn btn-primary">Health Records</a>
+            <a href="breed.php" class="btn btn-primary">Breeding Records</a>
+            <a href="transaction.php" class="btn btn-primary">Transaction Records</a>
+        </div>
+  </head>
+</body>
+</html>
